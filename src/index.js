@@ -13,6 +13,7 @@ async function startApolloServer(typeDefs, resolvers) {
       };
     },
     context,
+    introspection: true,
   });
 
   const { url, port } = await server.listen({port: process.env.PORT || 4000});
