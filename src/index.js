@@ -12,8 +12,6 @@ async function startApolloServer(typeDefs, resolvers) {
         trackAPI: new TrackAPI(),
       };
     },
-    context,
-    introspection: true,
   });
 
   const { url, port } = await server.listen({port: process.env.PORT || 4000});
